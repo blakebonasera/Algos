@@ -1,5 +1,5 @@
 // reviewing algos from Coding Dojo 
-const array = [3,14,1,3,2];
+const array = [3,1,14,35];
 
 
 function bubbleSort(array){
@@ -45,3 +45,4 @@ console.log(bubbleSort(array));
 // thing you want
 // }
 // while(condition)
+
