@@ -1,4 +1,4 @@
-function productSum(array) {
+function productSum(array, multiplier = 1) {
     let sum = 0;
     for ( const elemenet of array) {
         if(Array.isArray(element)) {
