@@ -3,7 +3,7 @@
 def generateDocument(characters, document):
     for character in document:
         documentFrequency = countCharacterFrequency(character,document)
-        charactersFrequency = countCharacterFreuency(character, characters)
+        charactersFrequency = countCharacterFrequency(character, characters)
         if documentFrequency > charactersFrequency:
             return False
 
