@@ -20,3 +20,16 @@ function countCharacterFrequency(character, target) {
 
 // O(c * (n + m)) time | O(c) space
 // the length of the document, and c is the nujmber of the unique characters in the document
+function generateDocument(characters, document) {
+    const alreadyCounted = new Set();
+
+    for (const character of document) {
+        if (character in alreadyCounted) continue;
+
+        const documentFrequency = countCharacterFrequency(character, document);
+        const charactersFrequency = countCharacterFrequency(character, characters);
+        if (documentFrequency > charactersFrequency) return false;
+        alreadyCounted.add(character);
+    }
+    return true
+}
