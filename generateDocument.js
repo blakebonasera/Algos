@@ -33,3 +33,24 @@ function generateDocument(characters, document) {
     }
     return true
 }
+
+
+// O(n + m) time | O(c) space
+// the length of the document, and c is the number of unique charcters in the characters string
+function generateDocument(characters, document) {
+    const characterCounts = {};
+
+    for ( const character of characters) {
+        if(!(character in characterCounts)) characterCounts[character] = 0;
+
+        characterCounts[character]++;
+    }
+
+    for (const character of document) {
+        if (!(character in characterCounts) || characterCounts[character] === 0) return false;
+
+        characterCounts[character]--;
+    }
+
+    return true;
+}
